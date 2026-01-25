@@ -2,6 +2,10 @@ package main;
 
 import person.Person;
 import rectangle.Rectangle;
+import school.Classes;
+import school.School;
+import school.Student;
+import school.Teacher;
 import student.StudentManager;
 import trafficLight.TrafficLight;
 import java.time.LocalDate;
@@ -151,5 +155,115 @@ public class Main {
 		inv.removeProduct("Laptop");
 		inv.display();
 
+		// School - Question 14
+		System.out.println("\n");
+		School school = new School();
+
+		Student student1 = new Student("Nguyen Dinh Thuong", 15);
+		Student student2 = new Student("Tran Thi Mai", 17);
+		Student student3 = new Student("Le Quang Huy", 18);
+		Student student4 = new Student("Pham Minh Duc", 19);
+		Student student5 = new Student("Hoang Thu Trang", 20);
+
+		school.addStudent(student1);
+		school.addStudent(student2);
+		school.addStudent(student3);
+		school.addStudent(student4);
+		school.addStudent(student5);
+
+		Teacher teacher1 = new Teacher("Nguyen Van Hung", "Math");
+		Teacher teacher2 = new Teacher("Tran Thi Lan", "Physics");
+		Teacher teacher3 = new Teacher("Le Quang Minh", "Chemistry");
+		Teacher teacher4 = new Teacher("Pham Thu Ha", "Biology");
+		Teacher teacher5 = new Teacher("Hoang Van Nam", "English");
+
+		school.addTeacher(teacher1);
+		school.addTeacher(teacher2);
+		school.addTeacher(teacher3);
+		school.addTeacher(teacher4);
+		school.addTeacher(teacher5);
+
+		Classes classes1 = new Classes("Math", teacher1);
+		classes1.addStudent(student1);
+		classes1.addStudent(student2);
+		classes1.addStudent(student3);
+		classes1.addStudent(student5);
+
+		Classes classes2 = new Classes("Physics", teacher2);
+		classes2.addStudent(student1);
+		classes2.addStudent(student2);
+		classes2.addStudent(student3);
+		classes2.addStudent(student5);
+
+		Classes classes3 = new Classes("Chemistry", teacher3);
+		classes3.addStudent(student1);
+		classes3.addStudent(student2);
+		classes3.addStudent(student3);
+		classes3.addStudent(student5);
+
+		Classes classes4 = new Classes("Biology", teacher4);
+		classes4.addStudent(student1);
+		classes4.addStudent(student2);
+		classes4.addStudent(student3);
+		classes4.addStudent(student5);
+
+		Classes classes5 = new Classes("English", teacher5);
+		classes5.addStudent(student1);
+		classes5.addStudent(student2);
+		classes5.addStudent(student3);
+		classes5.addStudent(student5);
+
+		school.addClass(classes1);
+		school.addClass(classes2);
+		school.addClass(classes3);
+		school.addClass(classes4);
+		school.addClass(classes5);
+
+		System.out.println("School information: ");
+		System.out.println("Number of Class: " + school.getClasses().size());
+		System.out.println("Number of Teacher: " + school.getTeacher().size());
+		System.out.println("Number of Student: " + school.getStudent().size());
+		
+		System.out.println("\n");
+		System.out.println("Math class information: ");
+		System.out.println("Class name: " + classes1.getClassName());
+		System.out.println("Teacher name: " + classes1.getTeacher());
+		System.out.println("Number of Student: " + classes1.getStList().size());
+		
+		System.out.println("\n");
+		System.out.println("Physic class information: ");
+		System.out.println("Class name: " + classes2.getClassName());
+		System.out.println("Teacher name: " + classes2.getTeacher());
+		System.out.println("Number of Student: " + classes2.getStList().size());
+		
+		System.out.println("\n");
+		System.out.println("Chemistry class information: ");
+		System.out.println("Class name: " + classes3.getClassName());
+		System.out.println("Teacher name: " + classes3.getTeacher());
+		System.out.println("Number of Student: " + classes3.getStList().size());
+
+		System.out.println("\n");
+		System.out.println("Biology class information: ");
+		System.out.println("Class name: " + classes4.getClassName());
+		System.out.println("Teacher name: " + classes4.getTeacher());
+		System.out.println("Number of Student: " + classes4.getStList().size());
+
+		System.out.println("\n");
+		System.out.println("English class information: ");
+		System.out.println("Class name: " + classes5.getClassName());
+		System.out.println("Teacher name: " + classes5.getTeacher());
+		System.out.println("Number of Student: " + classes5.getStList().size());
+		
+		school.removeClass(classes1);
+		school.removeStudent(student5);
+		school.removeTeacher(teacher1);
+		
+		System.out.println("\nSchool information: ");
+		System.out.println("Number of Class: " + school.getClasses().size());
+		System.out.println("Number of Teacher: " + school.getTeacher().size());
+		System.out.println("Number of Student: " + school.getStudent().size());
+		
+		
+		
 	}
 }
