@@ -6,7 +6,6 @@ import java.util.List;
 public class Classes {
 	private String ClassName;
 	private Teacher teacher;
-
 	private List<Student> stList = new ArrayList<>();
 
 	public Classes(String className, Teacher teacher) {
@@ -30,10 +29,20 @@ public class Classes {
 		this.teacher = teacher;
 	}
 
+	//return List of Student
 	public List<Student> getStList() {
 		return stList;
 	}
-
+	
+	//Show List of Student
+	public void displayStudent() {
+		if(!stList.isEmpty()) {
+			for (Student st : stList) {
+				System.out.println(st);
+			}
+		}
+	}
+	
 	public void addStudent(Student student) {
 		stList.add(student);
 	}

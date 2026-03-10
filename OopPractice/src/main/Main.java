@@ -229,31 +229,33 @@ public class Main {
 		System.out.println("Class name: " + classes1.getClassName());
 		System.out.println("Teacher name: " + classes1.getTeacher());
 		System.out.println("Number of Student: " + classes1.getStList().size());
+		System.out.println("List of Student: ");
+		classes1.displayStudent();
 		
-		System.out.println("\n");
-		System.out.println("Physic class information: ");
-		System.out.println("Class name: " + classes2.getClassName());
-		System.out.println("Teacher name: " + classes2.getTeacher());
-		System.out.println("Number of Student: " + classes2.getStList().size());
-		
-		System.out.println("\n");
-		System.out.println("Chemistry class information: ");
-		System.out.println("Class name: " + classes3.getClassName());
-		System.out.println("Teacher name: " + classes3.getTeacher());
-		System.out.println("Number of Student: " + classes3.getStList().size());
-
-		System.out.println("\n");
-		System.out.println("Biology class information: ");
-		System.out.println("Class name: " + classes4.getClassName());
-		System.out.println("Teacher name: " + classes4.getTeacher());
-		System.out.println("Number of Student: " + classes4.getStList().size());
-
-		System.out.println("\n");
-		System.out.println("English class information: ");
-		System.out.println("Class name: " + classes5.getClassName());
-		System.out.println("Teacher name: " + classes5.getTeacher());
-		System.out.println("Number of Student: " + classes5.getStList().size());
-		
+//		System.out.println("\n");
+//		System.out.println("Physic class information: ");
+//		System.out.println("Class name: " + classes2.getClassName());
+//		System.out.println("Teacher name: " + classes2.getTeacher());
+//		System.out.println("Number of Student: " + classes2.getStList().size());
+//		
+//		System.out.println("\n");
+//		System.out.println("Chemistry class information: ");
+//		System.out.println("Class name: " + classes3.getClassName());
+//		System.out.println("Teacher name: " + classes3.getTeacher());
+//		System.out.println("Number of Student: " + classes3.getStList().size());
+//
+//		System.out.println("\n");
+//		System.out.println("Biology class information: ");
+//		System.out.println("Class name: " + classes4.getClassName());
+//		System.out.println("Teacher name: " + classes4.getTeacher());
+//		System.out.println("Number of Student: " + classes4.getStList().size());
+//
+//		System.out.println("\n");
+//		System.out.println("English class information: ");
+//		System.out.println("Class name: " + classes5.getClassName());
+//		System.out.println("Teacher name: " + classes5.getTeacher());
+//		System.out.println("Number of Student: " + classes5.getStList().size());
+//		
 		school.removeClass(classes1);
 		school.removeStudent(student5);
 		school.removeTeacher(teacher1);
